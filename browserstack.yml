@@ -57,7 +57,7 @@ browserstackLocal: true # <boolean> (Default true)
 # Options to be passed to BrowserStack local in-case of advanced configurations
 browserStackLocalOptions:
   forceLocal: true  # <boolean> (Default: false) Set to true to resolve all your traffic via BrowserStack Local tunnel.
-  localIdentifier: parth-testing # <string> (Default: null) Needed if you need to run multiple instances of local.
+  localIdentifier: parth-testing-testing # <string> (Default: null) Needed if you need to run multiple instances of local.
 
 # ===================
 # Debugging features
