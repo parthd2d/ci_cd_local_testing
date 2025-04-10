@@ -8,29 +8,29 @@ from dotenv import load_dotenv
 import os
 from selenium.webdriver.chrome.options import Options
 
-# driver = webdriver.Chrome()
+driver = webdriver.Chrome()
 
-load_dotenv()
-BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or "BROWSERSTACK_USERNAME"
-BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or "BROWSERSTACK_ACCESS_KEY"
-URL = "https://hub.browserstack.com/wd/hub"
+# load_dotenv()
+# BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or "BROWSERSTACK_USERNAME"
+# BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or "BROWSERSTACK_ACCESS_KEY"
+# URL = "https://hub.browserstack.com/wd/hub"
 
-bstack_options = {
-    "os" : "OS X",
-    "osVersion" : "Monterey",
-    "buildName" : "testing",
-    "sessionName" : "cicd testing",
-    "userName": BROWSERSTACK_USERNAME,
-    "accessKey": BROWSERSTACK_ACCESS_KEY,
-    "local" : "true",
-    "localIdentifier":"parth-testing"
-}
-bstack_options["source"] = "python:sample-main:v1.0"
-options = Options()
-options.set_capability('bstack:options', bstack_options)
-driver = webdriver.Remote(
-    command_executor=URL,
-    options=options)
+# bstack_options = {
+#     "os" : "OS X",
+#     "osVersion" : "Monterey",
+#     "buildName" : "testing",
+#     "sessionName" : "cicd testing",
+#     "userName": BROWSERSTACK_USERNAME,
+#     "accessKey": BROWSERSTACK_ACCESS_KEY,
+#     "local" : "true",
+#     "localIdentifier":"parth-testing"
+# }
+# bstack_options["source"] = "python:sample-main:v1.0"
+# options = Options()
+# options.set_capability('bstack:options', bstack_options)
+# driver = webdriver.Remote(
+#     command_executor=URL,
+#     options=options)
 
 wait=WebDriverWait(driver,5)
 
