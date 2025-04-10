@@ -13,7 +13,7 @@ from selenium.webdriver.chrome.options import Options
 load_dotenv()
 BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or "BROWSERSTACK_USERNAME"
 BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or "BROWSERSTACK_ACCESS_KEY"
-URL = os.environ.get("URL") or "https://hub.browserstack.com/wd/hub"
+URL = "https://hub.browserstack.com/wd/hub"
 
 bstack_options = {
     "os" : "OS X",
